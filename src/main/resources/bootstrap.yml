@@ -6,8 +6,10 @@ spring:
    default
  cloud:
   config:
-   uri: http://192.168.99.100:32768
- 
+   uri: http://192.168.99.100:8888
+
+
+
 encrypt:
   key: weerT55667SSdfg
   

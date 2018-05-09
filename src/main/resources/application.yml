@@ -5,11 +5,18 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.99.100:8761/eureka/
       
 management:
   security:
     enabled: false
+    
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG    
     
 server:
   port: 8183
