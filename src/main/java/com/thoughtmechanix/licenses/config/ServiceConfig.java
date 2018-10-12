@@ -8,8 +8,15 @@ import org.springframework.stereotype.Component;
 @RefreshScope
 public class ServiceConfig {
 
+	@Value("${signing.key}")
+	private String jwtSigningKey = "";
+
+	public String getJwtSigningKey() {
+		return jwtSigningKey;
+	}
+
 	@Value("${example.property}")
-	private String exampleProperty="";
+	private String exampleProperty = "";
 
 	public String getExampleProperty() {
 		return exampleProperty;
