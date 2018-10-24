@@ -44,90 +44,92 @@ public class License {
 	@Transient
 	private String contactEmail = "";
 
-	public String getLicenseId() {
-		return licenseId;
+	public String getComment() {
+		return comment;
 	}
 
-	public void setLicenseId(String licenseId) {
-		this.licenseId = licenseId;
+	public String getContactEmail() {
+		return contactEmail;
 	}
 
-	public String getOrganizationId() {
-		return organizationId;
+	public String getContactName() {
+		return contactName;
 	}
 
-	public void setOrganizationId(String organizationId) {
-		this.organizationId = organizationId;
-	}
-
-	public String getProductName() {
-		return productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
-
-	public String getLicenseType() {
-		return licenseType;
-	}
-
-	public void setLicenseType(String licenseType) {
-		this.licenseType = licenseType;
-	}
-
-	public Integer getLicenseMax() {
-		return licenseMax;
-	}
-
-	public void setLicenseMax(Integer licenseMax) {
-		this.licenseMax = licenseMax;
+	public String getContactPhone() {
+		return contactPhone;
 	}
 
 	public Integer getLicenseAllocated() {
 		return licenseAllocated;
 	}
 
-	public void setLicenseAllocated(Integer licenseAllocated) {
-		this.licenseAllocated = licenseAllocated;
+	public String getLicenseId() {
+		return licenseId;
 	}
 
-	public String getComment() {
-		return comment;
+	public Integer getLicenseMax() {
+		return licenseMax;
+	}
+
+	public String getLicenseType() {
+		return licenseType;
+	}
+
+	public String getOrganizationId() {
+		return organizationId;
+	}
+
+	public String getOrganizationName() {
+		return organizationName;
+	}
+
+	public String getProductName() {
+		return productName;
 	}
 
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
 
-	public License withId(String id) {
-		this.setLicenseId(id);
-		return this;
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
 	}
 
-	public License withOrganizationId(String organizationId) {
-		this.setOrganizationId(organizationId);
-		return this;
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
 	}
 
-	public License withProductName(String productName) {
-		this.setProductName(productName);
-		return this;
+	public void setContactPhone(String contactPhone) {
+		this.contactPhone = contactPhone;
 	}
 
-	public License withLicenseType(String licenseType) {
-		this.setLicenseType(licenseType);
-		return this;
+	public void setLicenseAllocated(Integer licenseAllocated) {
+		this.licenseAllocated = licenseAllocated;
 	}
 
-	public License withLicenseMax(Integer licenseMax) {
-		this.setLicenseMax(licenseMax);
-		return this;
+	public void setLicenseId(String licenseId) {
+		this.licenseId = licenseId;
 	}
 
-	public License withLicenseAllocated(Integer licenseAllocated) {
-		this.setLicenseAllocated(licenseAllocated);
-		return this;
+	public void setLicenseMax(Integer licenseMax) {
+		this.licenseMax = licenseMax;
+	}
+
+	public void setLicenseType(String licenseType) {
+		this.licenseType = licenseType;
+	}
+
+	public void setOrganizationId(String organizationId) {
+		this.organizationId = organizationId;
+	}
+
+	public void setOrganizationName(String organizationName) {
+		this.organizationName = organizationName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
 	public License withComment(String comment) {
@@ -135,8 +137,8 @@ public class License {
 		return this;
 	}
 
-	public License withOrganizationName(String organizationName) {
-		this.setOrganizationName(organizationName);
+	public License withContactEmail(String contactEmail) {
+		this.setContactEmail(contactEmail);
 		return this;
 	}
 
@@ -150,41 +152,39 @@ public class License {
 		return this;
 	}
 
-	public License withContactEmail(String contactEmail) {
-		this.setContactEmail(contactEmail);
+	public License withId(String id) {
+		this.setLicenseId(id);
 		return this;
 	}
 
-	public String getOrganizationName() {
-		return organizationName;
+	public License withLicenseAllocated(Integer licenseAllocated) {
+		this.setLicenseAllocated(licenseAllocated);
+		return this;
 	}
 
-	public void setOrganizationName(String organizationName) {
-		this.organizationName = organizationName;
+	public License withLicenseMax(Integer licenseMax) {
+		this.setLicenseMax(licenseMax);
+		return this;
 	}
 
-	public String getContactName() {
-		return contactName;
+	public License withLicenseType(String licenseType) {
+		this.setLicenseType(licenseType);
+		return this;
 	}
 
-	public void setContactName(String contactName) {
-		this.contactName = contactName;
+	public License withOrganizationId(String organizationId) {
+		this.setOrganizationId(organizationId);
+		return this;
 	}
 
-	public String getContactPhone() {
-		return contactPhone;
+	public License withOrganizationName(String organizationName) {
+		this.setOrganizationName(organizationName);
+		return this;
 	}
 
-	public void setContactPhone(String contactPhone) {
-		this.contactPhone = contactPhone;
-	}
-
-	public String getContactEmail() {
-		return contactEmail;
-	}
-
-	public void setContactEmail(String contactEmail) {
-		this.contactEmail = contactEmail;
+	public License withProductName(String productName) {
+		this.setProductName(productName);
+		return this;
 	}
 
 }

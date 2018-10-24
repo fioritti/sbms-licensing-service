@@ -1,7 +1,13 @@
 package com.thoughtmechanix.licenses.model;
 
-public class Organization {
+import java.io.Serializable;
 
+public class Organization implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5400344858957227011L;
 	private String id;
 	private String name;
 	private String contactName;
