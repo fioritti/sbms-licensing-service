@@ -37,7 +37,7 @@
 		<java.version>1.8</java.version>
 		<start-class>com.thoughtmechanix.licenses.LicensingServiceApplication</start-class>
 		<docker.image.name>gfioritti/sbms-licensing-service</docker.image.name>
-		<docker.image.tag>chapter8</docker.image.tag>
+		<docker.image.tag>chapter9</docker.image.tag>
 	</properties>
 
 	<dependencies>
@@ -167,6 +167,14 @@
 			<groupId>com.netflix.hystrix</groupId>
 			<artifactId>hystrix-javanica</artifactId>
 			<version>1.5.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

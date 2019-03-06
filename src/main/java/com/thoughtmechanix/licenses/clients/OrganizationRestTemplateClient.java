@@ -3,6 +3,8 @@ package com.thoughtmechanix.licenses.clients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -22,18 +24,26 @@ public class OrganizationRestTemplateClient {
 	@Autowired
 	RestTemplate restTemplate;
 	
+	@Autowired
+	Tracer tracer;
+	
     @Autowired
     OrganizationRedisRepository orgRedisRepo;
     
     
     private Organization checkRedisCache(String organizationId) {
+    	Span newSpan = tracer.createSpan("readLicensingDataFromRedis");
         try {
             return orgRedisRepo.findOrganization(organizationId);
         }
         catch (Exception ex){
             logger.error("Error encountered while trying to retrieve organization {} check Redis Cache.  Exception {}", organizationId, ex);
             return null;
-        }
+        }finally {
+			newSpan.tag("peer.service", "redis");
+			newSpan.logEvent(Span.CLIENT_RECV);
+			tracer.close(newSpan);
+		}
     }
 
     private void cacheOrganizationObject(Organization org) {
